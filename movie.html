@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSync</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="movie.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="logo">
+            <div class="container">
+                <p>Cine<span>Sync</span></p>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-element">
+                <h3>Explore Cine World!</h3>
+                <input type="text" class="form-control" placeholder="Movie Name ..." id="movie-search-box"
+                    onkeyup="findMovies()" onclick="findMovies()">
+
+                <div class="search-list" id="search-list">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="result-container">
+                <div class="result-grid" id="result-grid"></div>
+            </div>
+            <button class="clear-button" onclick="clearAllData()">Clear All Data</button>
+            <button class="fetch-button" onclick="fetchLatestData(document.getElementById('movie-search-box'))">Fetch Latest Data</button>
+
+        </div>
+    </div>
+    <div id="error-message" class="hide-error"></div>
+
+    <script src="movie.js"></script>
+</body>
+
+</html>
